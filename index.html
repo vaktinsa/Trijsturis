@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div id="ievade">
         <h1>Trijstūra laukuma aprēķins</h1>
         Šī programma izmanto Herona formulu lai aprēķinātu trijstūra laukumu (izmantojot tikai malu izmērus)
         Ievadi malu garumus:
@@ -20,17 +20,11 @@
         
         <input class="mala" type="text" id="mala3" value="0.00" />
         
-        <input type="button" value="Labi" onclick="AprekinatLaukumu()" />
-        <h3>Ģenerētās paroles:</h3>
-        <table>
-            <thead>
-                <td>Nr</td>
-                <td>Vārds Uzvārds</td>
-            </thead>
-            <tbody class="rindas">
-            </tbody>
-        </table>
+        <input type="button" value="Labi" onclick="area()" />
+        <h3>Laukums</h3>
+
     </div>
+    <div id="izvade"></div>
 
     <script src="script.js"></script>
 </body>
