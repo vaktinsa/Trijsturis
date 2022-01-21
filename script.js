@@ -44,15 +44,7 @@ function irTrijsturis(m1, m2, m3) {
         return false;
     }
 }
-function irVienadsanu(m1, m2, m3){
-    if (m1 == m2 && m2 == m3 && m3 == m1){
-        return false;
-    }else{
-        if(m1 == m2 || m2 == m3||m3 == m1)
-        return true;
-    }
 
-}
 function rezultats() {
     const m = nolasa();
     m1 = m.m1; m2 = m.m2; m3 = m.m3;
@@ -62,20 +54,22 @@ function rezultats() {
     } else {
         if (irTrijsturis(m1, m2, m3) == false) {
             t = "Kļūda, neveidojas trijstūris."
-        }else{
-            if (irVienadsanu(m1, m2, m3) == true){
-            t = "Dati " + m1 + ", " + m2 + ", " + m3 + " derīgi" + ", trijstūris ir vienādsānu.";
-
-        }else {
-
-            
-            t = "Dati " + m1 + ", " + m2 + ", " + m3 + " derīgi";
+        }else{ 
+            t = "Dati " + m1 + ", " + m2 + ", " + m3 + " derīgi. ";
+            if (m1==m2&& m2==m3){
+                t+="Trijstūris ir vienādmalu.";
+            }else{
+                if(m1==m2 || m2==m3 || m3==m1){
+                    t+="Trijstūris ir vienādsānu.";
+                }
+            }
+        
         }
         const p = perimeter(m1, m2, m3);
         const s = Math.round(area(m1, m2, m3) * 100) / 100;
         t += " Perimetrs: " + p + "; laukums: " + s + ".";
     }
-    }
+    
     console.log(t);
     return t;
 }
@@ -86,4 +80,7 @@ function izvadaTekstu(){
     const raksti = document.createElement("p");
     sakne.innerHTML=teksts;
     sakne.appendChild(raksti);
+}
+function vēsture(){
+    
 }
