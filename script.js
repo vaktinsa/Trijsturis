@@ -81,6 +81,3 @@ function izvadaTekstu(){
     sakne.innerHTML=teksts;
     sakne.appendChild(raksti);
 }
-function vēsture(){
-    
-}
